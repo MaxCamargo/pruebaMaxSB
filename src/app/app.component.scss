@@ -1,0 +1,239 @@
+$primarytext: #28138f;
+$subtextcolor: #4d4d4d;
+$ptextcolor: #727272;
+$blacktittle: black;
+
+$ptexsize: 14px;
+$h1text: 20px;
+$h2text: 14px;
+$h3text: 18px;
+$Bolder: 18px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+section{
+    box-shadow: 0 10px 26px -15px #777; 
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    height: auto;
+    margin: 0 auto;
+
+    .description{
+        width: 90%;
+        text-align: center;
+        padding: 40px 0 25px 0;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+    }
+
+    .titulo{
+        display: block;
+        color: $subtextcolor;
+        font-size: $h3text;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0 0 10px 0;
+    }
+
+    h1{
+        color: $primarytext;
+        font-size: $h1text;
+        padding: 10px 0 10px 0;
+        text-decoration: underline;
+
+    }
+    h2{
+        color: $ptextcolor;
+        font-size: $h2text;
+        padding: 10px 5px 10px 0;
+        font-weight: lighter;
+
+        span{
+            padding: 0 10px 0 10px;
+        }
+    }
+
+    p{
+        color: $ptextcolor;
+        font-size: $ptexsize;
+    }
+
+    .score{
+        color: 18a1b0;
+        list-style:none;
+        margin:0;
+        padding:0;
+        text-align:center;
+
+        li{
+            display:inline;
+        }
+
+        a{
+            display:inline-block;
+            padding:10px;
+            color: #18a1b0 ;
+        }
+    }
+
+      
+}
+
+.perfil{
+    margin: 50px auto;
+    text-align: left;
+    padding: 25px 30px 25px 30px;
+
+    h2{
+        color: $blacktittle;
+        font-size: $Bolder;
+        font-weight: bold;
+    }
+
+    p{
+        color: $ptextcolor;
+        font-size: $ptexsize;
+        padding: 0 0 20px 0;
+    }
+
+    .attributes{
+        color: #18a1b0;
+        list-style:none;
+        margin:0;
+        padding:0;
+
+        li{
+            display:inline;
+        }
+
+        .nofilled{
+        margin-left: 0px;
+        }
+
+        a{
+            display: inline-block;
+            padding: 5px 11px 5px 11px;
+            color:#1a1919;
+            width: auto;
+            font-weight: bold;
+            background-color:#ddd;
+            border-radius: 90px;
+            margin: 5px 8px 5px 5px;
+            font-size: 10px; 
+        }
+    }   
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-color:#d8d8d8;
+    border-width: 0.5px;
+
+    .left {
+        width: 80%;
+        padding: 1em;
+        text-align: right;
+        color: $primarytext;
+    }
+    
+    .right {
+        width: 40%;
+        padding: 1em;
+        text-align: right;    
+    }
+    
+    p{
+        padding: 0 5px 0 0;
+
+        .watch{
+            padding: 0 10px 0 0;
+        }
+    }
+
+    .button {
+        background-color: #18a1b0;
+        border-radius: 60px;
+        color: white;
+        padding: 6px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+
+        .arrow{
+            padding: 0 0 0 10px;
+        }
+      }
+}
+
+
+@media only screen and (max-width: 690px) {
+    .container {
+        display: grid;
+        width: 100%;
+        height: auto;
+        margin: 0;
+
+        .description{
+            width: 100%;
+            padding: 25px 0 25px 0;
+        }
+    }
+
+    .perfil{
+        margin: 0 auto;
+        padding: 0px 45px 25px 45px;
+    }
+
+    .parent{
+        .left{
+            width: 50%;
+        }
+    
+        .right{
+            width: 50%;
+        }
+
+    }
+  }
+
+  @media only screen and (max-width: 318px) {
+
+    .parent{       
+        .button{
+            padding: 5px 17px;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 290px) {
+
+    .perfil{
+        visibility: hidden;
+        display: none;
+    }
+
+    .parent{       
+        .button{
+            font-size: 9.5px;
+            padding: 5px 17px;
+        }
+    }
+  }
